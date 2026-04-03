@@ -1005,7 +1005,6 @@ cd ../environments
 conda env create -f group10_R.yml
 conda env create -f group10_python.yml
 conda env create -f group10_kmedoids.yml
-conda env create -f tds_env.yml
 
 From the `Bash/` directory context used by the scripts:
 ```
