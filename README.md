@@ -4,6 +4,25 @@
 
 This repository contains the full end-to-end computational pipeline used to process, clean, model, and analyse the TDS Group 10 dataset for cardiovascular disease (CVD)-related research questions. The workflow is designed to run on an HPC cluster using **PBS job scheduling** and a combination of **R** and **Python** environments managed with **conda**.
 
+## Documentation
+
+A dedicated `Documentation/` folder is included in the repository to improve transparency and reproducibility of the preprocessing steps.
+
+This folder contains:
+
+- **Data Preprocessing Changes.xlsx** — an Excel file documenting all transformations applied to variables during preprocessing.
+
+The Excel file includes the following columns:
+
+- **Domain** — Variable domain classification (e.g., demographics, biomarkers, lifestyle)
+- **Variables** — Original variable names
+- **Changes** — Description of preprocessing transformations applied
+- **Missing (NA)** — Missingness proportion for each variable
+- **Missing (prefer not …)** — Proportion of "Prefer not to answer" or similar responses
+- **Selection** — Indicator of whether the variable was retained for downstream analyses
+
+This document provides a clear reference for preprocessing decisions and ensures that variable transformations and selection criteria can be easily traced and reproduced throughout the pipeline.
+
 The pipeline is designed to address the following research questions:
 
 ## Research Questions
@@ -26,16 +45,16 @@ The pipeline is organised into modular stages, from raw data extraction to downs
 The pipeline covers the following stages:
 
 1. **Environment setup**
-2. **Raw data extraction and harmonisation**
+2. **Raw data extraction**
 3. **Preprocessing and NA screening**
 4. **Imputation and descriptive Table 1 generation**
 5. **Correlation and univariate analysis**
 6. **Feature selection with stability-selection LASSO**
-7. **Predictive modelling with XGBoost**
-8. **DAG construction / causal structure work**
+7. **Feature selection with XGBoost**
+8. **DAG construction**
 9. **Clustering analysis**
 10. **Neural network modelling**
-11. **LVQ / GRLVQ modelling**
+11. **LVQ modelling**
 12. **K-medoids clustering**
 
 ---
@@ -200,7 +219,6 @@ The pipeline uses several conda environments depending on the stage:
 - **group10_R**: main R environment for extraction, preprocessing, imputation, Table 1, correlation, univariate analysis, DAG, and LASSO.
 - **group10_python**: Python environment for XGBoost, clustering, neural networks, and LVQ / GRLVQ.
 - **group10_kmedoids**: Python environment dedicated to K-medoids analyses.
-- **tds_env**: environment used in the Table 1 step according to the current launcher.
 
 ### Environment installation launcher
 
@@ -233,7 +251,7 @@ This block creates the analytical base dataset starting from the raw tabular UK 
 
 ### Inputs
 
-- Raw dataset:
+- Raw dataset, you can change this path:
   `/rds/general/project/hda_25-26/live/TDS/General/Data/tabular.tsv`
 - Extraction parameters and codings:
   - `0_extract_data/parameters/parameters.xlsx`
@@ -400,13 +418,12 @@ Runs the main preprocessing pipeline.
 - variable renaming,
 - feature engineering,
 - type corrections,
-- derivation of final analysis-ready fields,
-- train/validation/test preparation if implemented there.
+- derivation of final analysis-ready fields.
 
 ### 1_2_NA_Screening.sh
 
 **Purpose**  
-Screens missingness and performs NA cleaning after preprocessing.
+Screens missingness and performs NA cleaning after preprocessing based on Elbow Method.
 
 **Resources**  
 - 30 min
@@ -451,6 +468,8 @@ This launcher:
 
 **Purpose**  
 Imputes missing values in the processed dataset.
+Creates Scores.
+Divide into Train,Test, Validation.
 
 **Resources**  
 - 24 hours
@@ -480,12 +499,12 @@ Generates the descriptive baseline Table 1 from the imputed dataset.
 `Table1.R`
 
 **Environment**  
-`tds_env`
+`group10_R`
 
 **Expected outputs**
 
 - descriptive cohort table,
-- summary statistics for paper/reporting use.
+- summary statistics for the report.
 
 ---
 
@@ -529,7 +548,7 @@ Computes correlation structures across the dataset.
 
 - correlation matrices,
 - highly correlated feature reports,
-- plots or summary tables for redundancy assessment.
+- plots for redundancy assessment.
 
 ### 3_2_univariate_analysis.sh
 
@@ -550,14 +569,14 @@ Performs univariate statistical analysis.
 **Expected outputs**
 
 - per-variable significance screening,
-- summary tables and/or plots,
+- summary tables and plots,
 - support for variable prioritisation.
 
 ---
 
 ## Block 4: stability-selection LASSO
 
-This block addresses **RQ1-style feature selection**, with multiple LASSO analyses exploring the effect of sex, age, and model comparison.
+This block addresses **RQ1 feature selection**, with multiple LASSO analyses exploring the effect of sex, age, and model comparison.
 
 ### Internal flow
 
@@ -591,7 +610,7 @@ Runs the baseline stability-selection LASSO model.
 ### 4_2_sex_lasso.sh
 
 **Purpose**  
-Runs the LASSO analysis with sex-related modelling or stratification.
+Runs the LASSO analysis with sex-stratification.
 
 **Resources**  
 - 8 hours
@@ -640,14 +659,13 @@ Compares LASSO against an RF/AUC benchmark.
 
 - selected variables,
 - selection frequencies / stability metrics,
-- sex- and age-related comparisons,
-- AUC comparison between LASSO and RF-based approaches.
+- sex- and age-related comparisons.
 
 ---
 
 ## Block 5: XGBoost
 
-This block trains an XGBoost model for predictive modelling and feature importance analysis.
+This block trains an XGBoost model for feature importance analysis.
 
 ### Launcher: `5_0_Xgboost_launcher.sh`
 
@@ -688,7 +706,7 @@ Creates logs and outputs, then submits the DAG job.
 ### 6_1_DAG.sh
 
 **Purpose**  
-Runs DAG construction or DAG-based causal analysis.
+Runs DAG construction.
 
 **Resources**  
 - 1 hour
@@ -711,7 +729,7 @@ Runs DAG construction or DAG-based causal analysis.
 
 ## Block 7: clustering
 
-This block performs clustering analysis, likely around phenotype discovery or subgroup structure.
+This block performs clustering analysis with GMM based on the scores and compare to logistic regression.
 
 ### Launcher: `7_0_clustering_launcher.sh`
 
@@ -733,13 +751,11 @@ Runs the clustering workflow.
 **Environment**  
 `group10_python`
 
-**Notable directories created**
+**Directories created**
 
 - `outputs/gmm_plots/`
 - `outputs/tables/`
 
-**Interpretation**  
-This suggests the script likely produces clustering plots and tabular summaries, possibly involving Gaussian mixture model visualisations even if the folder is within the clustering block.
 
 ---
 
@@ -757,7 +773,7 @@ NN_optuna.py
 
 ### Launcher: `8_0_NN_launcher.sh`
 
-Submits three sequential jobs for optimisation, final paper-style training, and comparison.
+Submits three sequential jobs for optimisation, paper architecture, and comparison.
 
 ### 8_1_MLP_optuna.sh
 
@@ -778,7 +794,7 @@ Hyperparameter optimisation for the neural network using Optuna.
 ### 8_2_MLP_paper.sh
 
 **Purpose**  
-Runs the selected final neural network configuration.
+Runs a paper selected neural network configuration.
 
 **Resources**  
 - 6 hours
@@ -794,7 +810,7 @@ Runs the selected final neural network configuration.
 ### 8_3_MLP_compare.sh
 
 **Purpose**  
-Compares neural network models or compares NN against alternative approaches.
+Compares neural network models based on time and accuracy.
 
 **Resources**  
 - 1 hour
@@ -810,7 +826,7 @@ Compares neural network models or compares NN against alternative approaches.
 **Expected outputs**
 
 - Optuna tuning logs,
-- final trained MLP,
+- Trained MLP,
 - comparison metrics and summary tables/plots.
 
 ---
@@ -833,7 +849,7 @@ Creates directories and runs the two-step LVQ workflow.
 ### 9_1_param.sh
 
 **Purpose**  
-Optimises LVQ / GRLVQ parameters.
+Optimises LVQ parameters.
 
 **Resources**  
 - 48 hours
@@ -849,7 +865,7 @@ Optimises LVQ / GRLVQ parameters.
 ### 9_2_train.sh
 
 **Purpose**  
-Trains the final LVQ / GRLVQ model using selected parameters.
+Trains the final LVQ model using selected parameters.
 
 **Resources**  
 - 48 hours
@@ -865,7 +881,7 @@ Trains the final LVQ / GRLVQ model using selected parameters.
 **Expected outputs**
 
 - tuned LVQ hyperparameters,
-- trained LVQ / GRLVQ model,
+- trained LVQ model,
 - evaluation metrics and logs.
 
 ---
@@ -933,7 +949,7 @@ The script `master_launcher_pipeline.sh` is the full orchestration entry point f
 
 1. Creates all required log and output directories.
 2. Submits all jobs in strict sequence.
-3. Uses PBS dependencies (`-W depend=afterok:<jobid>`) so each job only starts if the previous one completed successfully.
+3. Uses PBS dependencies (`-W depend=afterok:<jobid>`) so each job only starts if the previous one completed successfully. If a job fails, the whole pipeline stops.
 4. Runs the **full pipeline end-to-end**, from environment setup to the final K-medoids analyses.
 
 ### Conceptual flow of the master launcher
@@ -977,7 +993,22 @@ The script `master_launcher_pipeline.sh` is the full orchestration entry point f
 
 ### To launch the full pipeline
 
+## Environment setup
+
+Before launching the pipeline, the required conda environments must be created using the `.yml` files provided in the `environments/` folder.
+
+Navigate to the `environments/` directory and create the environments:
+
+```bash
+cd ../environments
+
+conda env create -f group10_R.yml
+conda env create -f group10_python.yml
+conda env create -f group10_kmedoids.yml
+conda env create -f tds_env.yml
+
 From the `Bash/` directory context used by the scripts:
+```
 
 ```bash
 qsub master_launcher_pipeline.sh
@@ -1016,7 +1047,7 @@ This is useful for:
 
 ## Logs and outputs
 
-Almost every block follows the same organisational logic:
+Every block follows the same organisational logic:
 
 - `logs/` stores PBS stdout/stderr and optionally script-specific log files.
 - `outputs/` stores generated datasets, models, plots, and tables.
@@ -1031,20 +1062,6 @@ Almost every block follows the same organisational logic:
 │   └── *_R.log or *_output.log
 └── outputs/
 ```
-
-### Logging design
-
-Many scripts use:
-
-```bash
-Rscript ... 2>&1 | tee "$R_LOG"
-python3 ... 2>&1 | tee "$LOGDIR/<name>.log"
-```
-
-This means output is both:
-
-- sent to the terminal / PBS stream, and
-- saved into a persistent log file for debugging.
 
 ---
 
@@ -1069,20 +1086,7 @@ Some stages are lightweight, but others are computationally demanding.
 - K-medoids: **512 GB RAM**
 - Several Python/R modelling steps: **256 GB RAM**
 
-This means the full pipeline should be launched only when the required cluster resources are available.
-
----
-
-## Reproducibility features
-
-The pipeline includes several good reproducibility practices:
-
-- modular directory organisation,
-- explicit conda environments,
-- PBS dependency chaining,
-- separate log files for each step,
-- separation between scripts, outputs, and documentation,
-- support for full and partial reruns.
+This means the full pipeline should be launched only when the required cluster resources are available and it can take more or less 2 days
 
 ---
 
@@ -1133,114 +1137,22 @@ tail -f ../4_Stability_Selection_LASSO/logs/Q1_1_lasso_outcome.log
 | 0_extract_data | dictionary, extraction, recoding, merge with CVD | R | `group10_R` | `0_0_data_extraction_launcher.sh` | analytical base dataset |
 | 1_preprocessing | preprocessing and NA screening | R | `group10_R` | `1_0_Preprocessing_screening_launcher.sh` | cleaned dataset |
 | 2_Imputation | missing data imputation | R | `group10_R` | `2_0_imputation_table_launcher.sh` | imputed dataset |
-| table_1 | descriptive baseline table | R | `tds_env` | same as block 2 | Table 1 |
+| table_1 | descriptive baseline table | R | `group10_R` | same as block 2 | Table 1 |
 | 3_Correlation | exploratory correlation analysis | R | `group10_R` | `3_0_correlation_uv_launcher.sh` | correlation reports |
 | univariate_analysis | per-variable association analysis | R | `group10_R` | same as block 3 | univariate results |
 | 4_Stability_Selection_LASSO | feature selection and comparisons | R | `group10_R` | `4_0_lasso_launcher.sh` | selected variables, AUC comparisons |
-| 5_Xgboost | predictive modelling | Python | `group10_python` | `5_0_Xgboost_launcher.sh` | model + importance summaries |
+| 5_Xgboost | predictive modelling | Python | `group10_python` | `5_0_Xgboost_launcher.sh` | feature importance summaries |
 | 6_DAG | causal structure | R | `group10_R` | `6_0_DAG_launcher.sh` | DAG outputs |
 | 7_Clustering | phenotype/subgroup discovery | Python | `group10_python` | `7_0_clustering_launcher.sh` | cluster plots/tables |
 | 8_NN | MLP optimisation and comparison | Python | `group10_python` | `8_0_NN_launcher.sh` | tuned/final NN results |
-| 9_LVQ | LVQ / GRLVQ modelling | Python | `group10_python` | `9_0_lvq_launcher.sh` | tuned and trained LVQ models |
+| 9_LVQ | LVQ modelling | Python | `group10_python` | `9_0_lvq_launcher.sh` | tuned and trained LVQ models |
 | 10_Kmeiods | K-medoids and sex-stratified clustering | Python | `group10_kmedoids` | `10_0_kmeiods_launcher.sh` | cluster assignments |
 
----
-
-## Notes and minor inconsistencies to review
-
-A few naming inconsistencies appear across scripts and folders. They do not necessarily break the pipeline, but they are worth standardising.
-
-### Folder naming
-
-- `10_Kmeiods` appears to be a misspelling of `10_Kmedoids`.
-- Some folders use `script/`, others use `scripts/`.
-
-### File naming
-
-- In the master launcher, `2_2_Table_1.sh` appears, while elsewhere the file is written as `2_2_Table1.sh` or similar.
-- Some scripts use hyphens in filenames, others use underscores.
-
-### Environment activation style
-
-Both forms appear:
-
-```bash
-conda activate <env>
-```
-
-and
-
-```bash
-source activate <env>
-```
-
-It is safer to standardise to:
-
-```bash
-eval "$(~/anaconda3/bin/conda shell.bash hook)"
-conda activate <env>
-```
-
-### Logging conventions
-
-Most scripts use `set -euo pipefail`, but a few do not. For robustness, it is better if all launcher and job scripts include it.
-
----
-
-## Recommended future improvements
-
-To make the pipeline even more robust, the following improvements would help:
-
-1. **Add a single configuration file** for paths, environment names, and raw input locations.
-2. **Standardise naming** across all folders and scripts.
-3. **Write outputs explicitly in each README** inside each block.
-4. **Add file existence checks** before each stage starts.
-5. **Store software versions** for R, Python, and package snapshots.
-6. **Add final success/failure summaries** at the end of the master launcher.
-7. **Optionally split the master pipeline** into an early-data pipeline and a modelling pipeline for faster reruns.
-
----
-
-## Minimal conceptual schema for the full project
-
-```text
-RAW DATA
-  |
-  +--> dictionary construction
-  |
-  +--> selected variable extraction
-  |
-  +--> recoding and harmonisation
-  |
-  +--> merge with CVD outcome
-  v
-CLEAN BASE DATASET
-  |
-  +--> preprocessing
-  +--> NA screening
-  v
-MODELLING-READY DATASET
-  |
-  +--> imputation
-  +--> descriptive Table 1
-  +--> correlation analysis
-  +--> univariate analysis
-  v
-ANALYTICAL DATASET
-  |
-  +--> LASSO feature selection
-  +--> XGBoost prediction
-  +--> DAG/causal structure
-  +--> clustering
-  +--> neural networks
-  +--> LVQ/GRLVQ
-  +--> K-medoids
-  v
-FINAL RESULTS, TABLES, PLOTS, MODELS
-```
 
 ---
 
 ## Contact / maintenance note
 
-This README is intended as the central guide for understanding and launching the full Group 10 pipeline. Each subfolder can additionally maintain its own local `ReadMe.txt` with script-specific details, inputs, and outputs.
+This README is intended as the central guide for understanding and launching the full Group 10 pipeline. Each subfolder can additionally maintain its own local `ReadMe.txt` with script-specific details, inputs, and outputs. 
+
+ENJOY :)
