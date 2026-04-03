@@ -16,7 +16,7 @@ cd "$WORKDIR" || { echo "cd failed: $WORKDIR"; exit 1; }
 
 
 eval "$(~/anaconda3/bin/conda shell.bash hook)"
-conda activate tds_env
+conda activate group10_R
 
 Rscript --no-save --no-restore Table1.R 2>&1 | tee "$R_LOG"
 
