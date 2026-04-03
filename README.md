@@ -4,6 +4,26 @@
 
 This repository contains the full end-to-end computational pipeline used to process, clean, model, and analyse the TDS Group 10 dataset for cardiovascular disease (CVD)-related research questions. The workflow is designed to run on an HPC cluster using **PBS job scheduling** and a combination of **R** and **Python** environments managed with **conda**.
 
+## Documentation
+
+A dedicated `Documentation/` folder is included in the repository to improve transparency and reproducibility of the preprocessing steps.
+
+This folder contains:
+
+- **Data Preprocessing Changes.xlsx** — an Excel file documenting all transformations applied to variables during preprocessing.
+
+The file includes:
+
+- Original variable names  
+- Preprocessed variable names  
+- Transformation applied  
+- Domain classification (when applicable)  
+- Additional notes and rationale for transformations  
+
+This document provides a clear reference for all preprocessing decisions and ensures that variable transformations can be easily traced and reproduced throughout the pipeline.
+
+
+
 The pipeline is designed to address the following research questions:
 
 ## Research Questions
