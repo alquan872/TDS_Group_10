@@ -1,0 +1,6 @@
+"OriginalValue" "OriginalMeaning" "RecodedValue" "RecodedMeaning"
+"-3" "Prefer not to answer" "-3" "Prefer not to answer"
+"1" "Smoked on most or all days" "1" "Smoked on most or all days"
+"2" "Smoked occasionally" "2" "Smoked occasionally"
+"3" "Just tried once or twice" "3" "Just tried once or twice"
+"4" "I have never smoked" "4" "I have never smoked"

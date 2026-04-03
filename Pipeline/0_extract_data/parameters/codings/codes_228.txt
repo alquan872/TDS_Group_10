@@ -1,0 +1,8 @@
+"OriginalValue" "OriginalMeaning" "RecodedValue" "RecodedMeaning"
+"1" "Mental illness" "1" "Mental illness"
+"2" "Mental impairment" "2" "Mental impairment"
+"3" "Severe mental impairment" "3" "Severe mental impairment"
+"4" "Psychopathic disorder" "4" "Psychopathic disorder"
+"5" "Other" "5" "Other"
+"8" "Not applicable" "8" "Not applicable"
+"9" "Not known" "9" "Not known"

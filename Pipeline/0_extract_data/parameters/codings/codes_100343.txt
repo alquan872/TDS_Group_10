@@ -1,0 +1,5 @@
+"OriginalValue" "OriginalMeaning" "RecodedValue" "RecodedMeaning"
+"-3" "Prefer not to answer" "-3" "Prefer not to answer"
+"1" "Never/rarely" "1" "Never/rarely"
+"2" "Sometimes" "2" "Sometimes"
+"3" "Usually" "3" "Usually"

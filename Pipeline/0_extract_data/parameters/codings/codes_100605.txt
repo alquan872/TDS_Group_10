@@ -1,0 +1,7 @@
+"OriginalValue" "OriginalMeaning" "RecodedValue" "RecodedMeaning"
+"-3" "Prefer not to answer" "-3" "Prefer not to answer"
+"-7" "None of the above" "-7" "None of the above"
+"1" "Heart attack" "1" "Heart attack"
+"2" "Angina" "2" "Angina"
+"3" "Stroke" "3" "Stroke"
+"4" "High blood pressure" "4" "High blood pressure"

@@ -1,0 +1,6 @@
+"OriginalValue" "OriginalMeaning" "RecodedValue" "RecodedMeaning"
+"-818" "Prefer not to answer" "-818" "Prefer not to answer"
+"0" "Not at all" "0" "Not at all"
+"1" "A little" "1" "A little"
+"2" "Somewhat" "2" "Somewhat"
+"3" "A lot" "3" "A lot"

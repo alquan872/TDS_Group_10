@@ -1,0 +1,5 @@
+"OriginalValue" "OriginalMeaning" "RecodedValue" "RecodedMeaning"
+"-1" "Unable to walk up hills or to hurry" "-1" "Unable to walk up hills or to hurry"
+"-3" "Prefer not to answer" "-3" "Prefer not to answer"
+"0" "No" "0" "No"
+"1" "Yes" "1" "Yes"

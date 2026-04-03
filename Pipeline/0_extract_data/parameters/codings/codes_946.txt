@@ -1,0 +1,4 @@
+"OriginalValue" "OriginalMeaning" "RecodedValue" "RecodedMeaning"
+"-1001" "Less than one cigarette per day" "-1001" "Less than one cigarette per day"
+"-818" "Prefer not to answer" "-818" "Prefer not to answer"
+"0" "No cigarettes, only smoke cigars or pipes" "0" "No cigarettes, only smoke cigars or pipes"

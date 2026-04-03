@@ -1,0 +1,4 @@
+"OriginalValue" "OriginalMeaning" "RecodedValue" "RecodedMeaning"
+"0" "Direct" "0" "Direct"
+"1" "Backup" "1" "Backup"
+"2" "Archive" "2" "Archive"

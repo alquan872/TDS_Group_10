@@ -1,0 +1,7 @@
+"OriginalValue" "OriginalMeaning" "RecodedValue" "RecodedMeaning"
+"-1" "Do not know" "-1" "Do not know"
+"-3" "Prefer not to answer" "-3" "Prefer not to answer"
+"1" "Decaffeinated coffee (any type)" "1" "Decaffeinated coffee (any type)"
+"2" "Instant coffee" "2" "Instant coffee"
+"3" "Ground coffee (include espresso, filter etc)" "3" "Ground coffee (include espresso, filter etc)"
+"4" "Other type of coffee" "4" "Other type of coffee"

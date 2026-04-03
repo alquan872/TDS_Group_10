@@ -1,0 +1,8 @@
+"OriginalValue" "OriginalMeaning" "RecodedValue" "RecodedMeaning"
+"-3" "Prefer not to answer" "-3" "Prefer not to answer"
+"1" "Daily or almost daily" "1" "Daily or almost daily"
+"2" "Three or four times a week" "2" "Three or four times a week"
+"3" "Once or twice a week" "3" "Once or twice a week"
+"4" "One to three times a month" "4" "One to three times a month"
+"5" "Special occasions only" "5" "Special occasions only"
+"6" "Never" "6" "Never"

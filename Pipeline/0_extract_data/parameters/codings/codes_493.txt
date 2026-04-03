@@ -1,0 +1,5 @@
+"OriginalValue" "OriginalMeaning" "RecodedValue" "RecodedMeaning"
+"-121" "Do not know" "-121" "Do not know"
+"-131" "Sometimes" "-131" "Sometimes"
+"-141" "Often" "-141" "Often"
+"0" "Rarely/never" "0" "Rarely/never"

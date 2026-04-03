@@ -1,0 +1,5 @@
+"OriginalValue" "OriginalMeaning" "RecodedValue" "RecodedMeaning"
+"-1" "Do not know" "-1" "Do not know"
+"-3" "Prefer not to answer" "-3" "Prefer not to answer"
+"11" "No problems" "11" "No problems"
+"12" "Needed treatment or caused problems with work, relationships, finances, the law or other aspects of life" "12" "Needed treatment or caused problems with work, relationships, finances, the law or other aspects of life"

@@ -1,0 +1,8 @@
+"OriginalValue" "OriginalMeaning" "RecodedValue" "RecodedMeaning"
+"-3" "Prefer not to answer" "-3" "Prefer not to answer"
+"-7" "None of the above" "-7" "None of the above"
+"1" "Sports club or gym" "1" "Sports club or gym"
+"2" "Pub or social club" "2" "Pub or social club"
+"3" "Religious group" "3" "Religious group"
+"4" "Adult education class" "4" "Adult education class"
+"5" "Other group activity" "5" "Other group activity"

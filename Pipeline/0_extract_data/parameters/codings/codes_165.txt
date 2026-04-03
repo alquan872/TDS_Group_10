@@ -1,0 +1,4 @@
+"OriginalValue" "OriginalMeaning" "RecodedValue" "RecodedMeaning"
+"0" "None" "0" "None"
+"1" "Date and aliquot correction" "1" "Date and aliquot correction"
+"2" "Date correction only" "2" "Date correction only"

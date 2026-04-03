@@ -1,0 +1,2 @@
+"OriginalValue" "OriginalMeaning" "RecodedValue" "RecodedMeaning"
+"-1" "More than a month" "-1" "More than a month"

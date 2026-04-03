@@ -1,0 +1,5 @@
+"OriginalValue" "OriginalMeaning" "RecodedValue" "RecodedMeaning"
+"-3" "Prefer not to answer" "-3" "Prefer not to answer"
+"0" "No" "0" "No"
+"1" "Yes, on most or all days" "1" "Yes, on most or all days"
+"2" "Only occasionally" "2" "Only occasionally"
