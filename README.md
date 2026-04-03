@@ -12,17 +12,16 @@ This folder contains:
 
 - **Data Preprocessing Changes.xlsx** — an Excel file documenting all transformations applied to variables during preprocessing.
 
-The file includes:
+The Excel file includes the following columns:
 
-- Original variable names  
-- Preprocessed variable names  
-- Transformation applied  
-- Domain classification (when applicable)  
-- Additional notes and rationale for transformations  
+- **Domain** — Variable domain classification (e.g., demographics, biomarkers, lifestyle)
+- **Variables** — Original variable names
+- **Changes** — Description of preprocessing transformations applied
+- **Missing (NA)** — Missingness proportion for each variable
+- **Missing (prefer not …)** — Proportion of "Prefer not to answer" or similar responses
+- **Selection** — Indicator of whether the variable was retained for downstream analyses
 
-This document provides a clear reference for all preprocessing decisions and ensures that variable transformations can be easily traced and reproduced throughout the pipeline.
-
-
+This document provides a clear reference for preprocessing decisions and ensures that variable transformations and selection criteria can be easily traced and reproduced throughout the pipeline.
 
 The pipeline is designed to address the following research questions:
 
