@@ -23,5 +23,5 @@ echo "Extract selected submitted: $JOB2"
 JOB3=$(qsub -W depend=afterok:$JOB2 ../Bash/0_3_recode_extracted.sh)
 echo "Recode extracted submitted: $JOB3"
 
-JOB34=$(qsub -W depend=afterok:$JOB3 ../Bash/0_4_merge_cvd.sh)
+JOB4=$(qsub -W depend=afterok:$JOB3 ../Bash/0_4_merge_cvd.sh)
 echo "Recode extracted submitted: $JOB4"
