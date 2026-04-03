@@ -1,15 +1,8 @@
-# Data (do not upload datasets)
+# Data folders
 data/
 datasets/
-*.csv
-*.tsv
-*.xlsx
-*.xls
-*.parquet
-*.feather
-*.rds
 
-# Large arrays / models
+# Large data files
 *.npy
 *.npz
 *.pkl
@@ -44,7 +37,7 @@ __pycache__/
 # System
 .DS_Store
 
-# HPC temp files
+# HPC temp
 tmp/
 temp/
 scratch/
