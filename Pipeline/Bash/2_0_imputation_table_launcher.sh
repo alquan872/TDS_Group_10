@@ -17,5 +17,5 @@ mkdir -p ../table_1/outputs
 JOB1=$(qsub ../Bash/2_1_Imputation.sh)
 echo "Imputation submitted: $JOB1"
 
-JOB2=$(qsub -W depend=afterok:$JOB1 ../Bash/2_2_Table1.sh)
+JOB2=$(qsub -W depend=afterok:$JOB1 ../Bash/2_2_Table_1.sh)
 echo "Table1 submitted: $JOB2"

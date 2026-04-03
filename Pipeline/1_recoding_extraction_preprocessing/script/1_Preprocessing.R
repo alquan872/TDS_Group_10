@@ -15,7 +15,7 @@ library(tibble)
 library(stringr)
 
 
-options(warn = 2)  # convierte warnings en errores para ver el traceback
+options(warn = 2)
 
 # Load raw data
 ukb <- readRDS("../outputs/ukb_raw.rds")
