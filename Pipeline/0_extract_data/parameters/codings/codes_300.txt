@@ -1,8 +1,0 @@
-"OriginalValue" "OriginalMeaning" "RecodedValue" "RecodedMeaning"
-"0" "Self-reported only" "0" "Self-reported only"
-"1" "Hospital admission" "1" "Hospital admission"
-"11" "Hospital primary" "11" "Hospital primary"
-"12" "Death primary" "12" "Death primary"
-"2" "Death only" "2" "Death only"
-"21" "Hospital secondary" "21" "Hospital secondary"
-"22" "Death contributory" "22" "Death contributory"

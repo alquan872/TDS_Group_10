@@ -1,4 +1,0 @@
-"OriginalValue" "OriginalMeaning" "RecodedValue" "RecodedMeaning"
-"0" "low" "0" "low"
-"1" "moderate" "1" "moderate"
-"2" "high" "2" "high"

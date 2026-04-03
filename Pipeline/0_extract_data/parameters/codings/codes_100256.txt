@@ -1,5 +1,0 @@
-"OriginalValue" "OriginalMeaning" "RecodedValue" "RecodedMeaning"
-"1" "Bicycle" "1" "Bicycle"
-"2" "Resting only" "2" "Resting only"
-"6" "Not performed - equipment failure" "6" "Not performed - equipment failure"
-"7" "Not performed - other reason" "7" "Not performed - other reason"

@@ -1,4 +1,0 @@
-"OriginalValue" "OriginalMeaning" "RecodedValue" "RecodedMeaning"
-"1" "small (125ml)" "1" "small (125ml)"
-"2" "medium (175ml)" "2" "medium (175ml)"
-"3" "large (250ml)" "3" "large (250ml)"

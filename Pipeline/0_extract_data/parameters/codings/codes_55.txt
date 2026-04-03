@@ -1,3 +1,0 @@
-"OriginalValue" "OriginalMeaning" "RecodedValue" "RecodedMeaning"
-"1" "Pass" "1" "Pass"
-"2" "Fail" "2" "Fail"

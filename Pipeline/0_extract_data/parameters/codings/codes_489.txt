@@ -1,4 +1,0 @@
-"OriginalValue" "OriginalMeaning" "RecodedValue" "RecodedMeaning"
-"0" "Shift pattern was worked for some (but not all) of job" "0" "Shift pattern was worked for some (but not all) of job"
-"1" "Shift pattern was worked for whole of job" "1" "Shift pattern was worked for whole of job"
-"9" "This type of shift pattern was not worked during job" "9" "This type of shift pattern was not worked during job"

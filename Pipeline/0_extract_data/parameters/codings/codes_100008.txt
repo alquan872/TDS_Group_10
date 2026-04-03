@@ -1,6 +1,0 @@
-"OriginalValue" "OriginalMeaning" "RecodedValue" "RecodedMeaning"
-"0" "No" "0" "No"
-"1" "Yes" "1" "Yes"
-"111" "varied" "111" "varied"
-"222" "Do not know" "222" "Do not know"
-"313" "N/A" "313" "N/A"

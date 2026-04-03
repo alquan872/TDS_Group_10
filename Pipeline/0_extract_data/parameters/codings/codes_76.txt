@@ -1,7 +1,0 @@
-"OriginalValue" "OriginalMeaning" "RecodedValue" "RecodedMeaning"
-"10" "Low calorie" "10" "Low calorie"
-"11" "Vegetarian" "11" "Vegetarian"
-"12" "Vegan" "12" "Vegan"
-"13" "Other" "13" "Other"
-"8" "Gluten-free" "8" "Gluten-free"
-"9" "Lactose-free" "9" "Lactose-free"

@@ -1,6 +1,0 @@
-"OriginalValue" "OriginalMeaning" "RecodedValue" "RecodedMeaning"
-"-1" "Question not asked due to previous answers" "-1" "Question not asked due to previous answers"
-"1" "Direct entry" "1" "Direct entry"
-"2" "Manual entry of electronic results" "2" "Manual entry of electronic results"
-"3" "Manual sphygmometer" "3" "Manual sphygmometer"
-"4" "Not performed" "4" "Not performed"

@@ -1,7 +1,0 @@
-"OriginalValue" "OriginalMeaning" "RecodedValue" "RecodedMeaning"
-"E/W" "Originating from England/Wales" "E/W" "Originating from England/Wales"
-"HES" "Hospital Episode Statistics from England" "HES" "Hospital Episode Statistics from England"
-"NCIN" "National Cancer Intelligence Network" "NCIN" "National Cancer Intelligence Network"
-"PEDW" "Patient Episode Database for Wales" "PEDW" "Patient Episode Database for Wales"
-"SCOT" "Originating from Scotland" "SCOT" "Originating from Scotland"
-"SMR" "Scottish Morbidity Records" "SMR" "Scottish Morbidity Records"

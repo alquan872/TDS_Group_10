@@ -1,5 +1,0 @@
-"OriginalValue" "OriginalMeaning" "RecodedValue" "RecodedMeaning"
-"-1" "Time uncertain/unknown" "-1" "Time uncertain/unknown"
-"-3" "Preferred not to answer" "-3" "Preferred not to answer"
-"-4" "Age at event" "-4" "Age at event"
-"-5" "Year of event" "-5" "Year of event"

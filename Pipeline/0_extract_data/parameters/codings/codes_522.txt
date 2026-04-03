@@ -1,7 +1,0 @@
-"OriginalValue" "OriginalMeaning" "RecodedValue" "RecodedMeaning"
-"-818" "Prefer not to answer" "-818" "Prefer not to answer"
-"1" "1 or 2" "1" "1 or 2"
-"2" "3 or 4" "2" "3 or 4"
-"3" "5 or 6" "3" "5 or 6"
-"4" "7, 8 or 9" "4" "7, 8 or 9"
-"5" "10 or more" "5" "10 or more"

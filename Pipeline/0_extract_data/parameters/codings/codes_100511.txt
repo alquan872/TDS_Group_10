@@ -1,7 +1,0 @@
-"OriginalValue" "OriginalMeaning" "RecodedValue" "RecodedMeaning"
-"-1" "Do not know" "-1" "Do not know"
-"-3" "Prefer not to answer" "-3" "Prefer not to answer"
-"1" "Yes, all of the time" "1" "Yes, all of the time"
-"2" "Yes, most of the time" "2" "Yes, most of the time"
-"3" "Yes, sometimes" "3" "Yes, sometimes"
-"4" "No, never" "4" "No, never"

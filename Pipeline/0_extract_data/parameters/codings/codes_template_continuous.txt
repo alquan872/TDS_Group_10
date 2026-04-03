@@ -1,2 +1,0 @@
-"MinValue" "MaxValue" "RecodedValue" "RecodedMeaning"
-NA NA NA NA

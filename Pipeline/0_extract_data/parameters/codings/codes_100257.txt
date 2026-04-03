@@ -1,6 +1,0 @@
-"OriginalValue" "OriginalMeaning" "RecodedValue" "RecodedMeaning"
-"1" "Fully completed" "1" "Fully completed"
-"31" "Participant wanted to stop early" "31" "Participant wanted to stop early"
-"32" "Participant reported chest-pain and/or other discomfort" "32" "Participant reported chest-pain and/or other discomfort"
-"33" "Heart rate reached safety level" "33" "Heart rate reached safety level"
-"34" "Incomplete - other reason" "34" "Incomplete - other reason"

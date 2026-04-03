@@ -1,5 +1,0 @@
-"OriginalValue" "OriginalMeaning" "RecodedValue" "RecodedMeaning"
-"-600" "Not bothered at all" "-600" "Not bothered at all"
-"-601" "Bothered a little" "-601" "Bothered a little"
-"-602" "Bothered a lot" "-602" "Bothered a lot"
-"-818" "Prefer not to answer" "-818" "Prefer not to answer"

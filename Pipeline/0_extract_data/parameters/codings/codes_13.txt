@@ -1,3 +1,0 @@
-"OriginalValue" "OriginalMeaning" "RecodedValue" "RecodedMeaning"
-"-1.000" "Date uncertain or unknown" "-1.000" "Date uncertain or unknown"
-"-3.000" "Preferred not to answer" "-3.000" "Preferred not to answer"

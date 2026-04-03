@@ -1,5 +1,0 @@
-"OriginalValue" "OriginalMeaning" "RecodedValue" "RecodedMeaning"
-"-3" "Prefer not to answer" "-3" "Prefer not to answer"
-"1" "More nowadays?" "1" "More nowadays?"
-"2" "About the same?" "2" "About the same?"
-"3" "Less nowadays?" "3" "Less nowadays?"

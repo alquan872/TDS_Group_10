@@ -1,3 +1,0 @@
-"OriginalValue" "OriginalMeaning" "RecodedValue" "RecodedMeaning"
-"-1" "Do not know" "-1" "Do not know"
-"-10" "Less than one a day" "-10" "Less than one a day"

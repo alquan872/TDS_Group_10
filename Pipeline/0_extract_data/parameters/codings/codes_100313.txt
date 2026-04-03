@@ -1,6 +1,0 @@
-"OriginalValue" "OriginalMeaning" "RecodedValue" "RecodedMeaning"
-"-3" "Prefer not to answer" "-3" "Prefer not to answer"
-"-7" "None of the above" "-7" "None of the above"
-"1" "Slow pace" "1" "Slow pace"
-"2" "Steady average pace" "2" "Steady average pace"
-"3" "Brisk pace" "3" "Brisk pace"

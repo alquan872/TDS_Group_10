@@ -1,7 +1,0 @@
-"OriginalValue" "OriginalMeaning" "RecodedValue" "RecodedMeaning"
-"-818" "Prefer not to answer" "-818" "Prefer not to answer"
-"1" "Never" "1" "Never"
-"2" "Less than monthly" "2" "Less than monthly"
-"3" "Monthly" "3" "Monthly"
-"4" "Weekly" "4" "Weekly"
-"5" "Daily or almost daily" "5" "Daily or almost daily"

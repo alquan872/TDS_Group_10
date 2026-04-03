@@ -1,5 +1,0 @@
-"OriginalValue" "OriginalMeaning" "RecodedValue" "RecodedMeaning"
-"3" "Ill" "3" "Ill"
-"4" "Fasting" "4" "Fasting"
-"5" "Away" "5" "Away"
-"6" "Other reason untypical diet" "6" "Other reason untypical diet"
