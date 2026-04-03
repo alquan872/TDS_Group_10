@@ -4,6 +4,16 @@
 
 This repository contains the full end-to-end computational pipeline used to process, clean, model, and analyse the TDS Group 10 dataset for cardiovascular disease (CVD)-related research questions. The workflow is designed to run on an HPC cluster using **PBS job scheduling** and a combination of **R** and **Python** environments managed with **conda**.
 
+The pipeline is designed to address the following research questions:
+
+## Research Questions
+
+1. **Which exposome factors contribute most strongly to incident cardiovascular disease risk?**
+
+2. **How can the variables selected through LASSO and XGBoost be integrated into a Directed Acyclic Graph (DAG) to characterise potential causal pathways leading to cardiovascular disease?**
+
+3. **Do composite biological and cardiovascular health scores improve prediction of incident cardiovascular disease compared to individual biomarkers, and can data-driven approaches such as Learning Vector Quantization (LVQ) and k-medoids clustering identify phenotypic groups with improved predictive performance? Furthermore, do these associations differ by sex?**
+
 The pipeline is organised into modular stages, from raw data extraction to downstream modelling and clustering.
 
 - The **master launcher** runs the **entire pipeline sequentially**, from environment setup to the final modelling and clustering stages.
