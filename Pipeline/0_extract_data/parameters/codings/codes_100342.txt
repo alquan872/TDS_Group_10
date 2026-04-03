@@ -1,0 +1,7 @@
+"OriginalValue" "OriginalMeaning" "RecodedValue" "RecodedMeaning"
+"-1" "Do not know" "-1" "Do not know"
+"-3" "Prefer not to answer" "-3" "Prefer not to answer"
+"1" "Definitely a 'morning' person" "1" "Definitely a 'morning' person"
+"2" "More a 'morning' than 'evening' person" "2" "More a 'morning' than 'evening' person"
+"3" "More an 'evening' than a 'morning' person" "3" "More an 'evening' than a 'morning' person"
+"4" "Definitely an 'evening' person" "4" "Definitely an 'evening' person"

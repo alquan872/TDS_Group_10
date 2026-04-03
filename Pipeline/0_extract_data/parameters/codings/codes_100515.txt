@@ -1,0 +1,4 @@
+"OriginalValue" "OriginalMeaning" "RecodedValue" "RecodedMeaning"
+"1" "Right eye" "1" "Right eye"
+"2" "Left eye" "2" "Left eye"
+"3" "Both eyes" "3" "Both eyes"

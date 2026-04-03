@@ -1,0 +1,6 @@
+"OriginalValue" "OriginalMeaning" "RecodedValue" "RecodedMeaning"
+"-1" "Do not know" "-1" "Do not know"
+"-3" "Prefer not to answer" "-3" "Prefer not to answer"
+"11" "At least two days, but less than a week" "11" "At least two days, but less than a week"
+"12" "Less than a week" "12" "Less than a week"
+"13" "A week or more" "13" "A week or more"

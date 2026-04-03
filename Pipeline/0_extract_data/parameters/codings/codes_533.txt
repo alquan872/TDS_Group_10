@@ -1,0 +1,5 @@
+"OriginalValue" "OriginalMeaning" "RecodedValue" "RecodedMeaning"
+"-818" "Prefer not to answer" "-818" "Prefer not to answer"
+"0" "Never" "0" "Never"
+"1" "Yes, but not in the last 12 months" "1" "Yes, but not in the last 12 months"
+"2" "Yes, within the last 12 months" "2" "Yes, within the last 12 months"

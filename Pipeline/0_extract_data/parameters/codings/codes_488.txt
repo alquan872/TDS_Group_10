@@ -1,0 +1,2 @@
+"OriginalValue" "OriginalMeaning" "RecodedValue" "RecodedMeaning"
+"-1001.000" "Less than one year" "-1001.000" "Less than one year"

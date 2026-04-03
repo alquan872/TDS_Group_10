@@ -1,0 +1,3 @@
+"OriginalValue" "OriginalMeaning" "RecodedValue" "RecodedMeaning"
+"<10" "Result below 10 millimole/L" "<10" "Result below 10 millimole/L"
+">400" "Result above 400 millimole/L" ">400" "Result above 400 millimole/L"

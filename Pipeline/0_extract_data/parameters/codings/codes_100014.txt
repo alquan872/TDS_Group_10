@@ -1,0 +1,4 @@
+"OriginalValue" "OriginalMeaning" "RecodedValue" "RecodedMeaning"
+"10" "Average" "10" "Average"
+"15" "Larger" "15" "Larger"
+"5" "Smaller" "5" "Smaller"

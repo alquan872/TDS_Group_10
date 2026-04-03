@@ -1,0 +1,2 @@
+"OriginalValue" "OriginalMeaning" "RecodedValue" "RecodedMeaning"
+"0.000" "Measure invalid" "0.000" "Measure invalid"

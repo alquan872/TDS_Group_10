@@ -1,0 +1,4 @@
+"OriginalValue" "OriginalMeaning" "RecodedValue" "RecodedMeaning"
+"0" "No" "0" "No"
+"1" "Yes" "1" "Yes"
+"2" "Unsure" "2" "Unsure"

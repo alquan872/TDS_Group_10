@@ -1,0 +1,2 @@
+"OriginalValue" "OriginalMeaning" "RecodedValue" "RecodedMeaning"
+"1269519" "Analyser 1269659" "1269519" "Analyser 1269659"

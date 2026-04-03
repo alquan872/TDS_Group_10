@@ -1,0 +1,8 @@
+"OriginalValue" "OriginalMeaning" "RecodedValue" "RecodedMeaning"
+"-1" "Do not know" "-1" "Do not know"
+"-3" "Prefer not to answer" "-3" "Prefer not to answer"
+"1" "Bran cereal (e.g. All Bran, Branflakes)" "1" "Bran cereal (e.g. All Bran, Branflakes)"
+"2" "Biscuit cereal (e.g. Weetabix)" "2" "Biscuit cereal (e.g. Weetabix)"
+"3" "Oat cereal (e.g. Ready Brek, porridge)" "3" "Oat cereal (e.g. Ready Brek, porridge)"
+"4" "Muesli" "4" "Muesli"
+"5" "Other (e.g. Cornflakes, Frosties)" "5" "Other (e.g. Cornflakes, Frosties)"

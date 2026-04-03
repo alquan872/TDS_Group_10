@@ -1,0 +1,8 @@
+"OriginalValue" "OriginalMeaning" "RecodedValue" "RecodedMeaning"
+"-3" "Prefer not to answer" "-3" "Prefer not to answer"
+"-7" "None of the above" "-7" "None of the above"
+"5" "Blood clot in the leg (DVT)" "5" "Blood clot in the leg (DVT)"
+"6" "Emphysema/chronic bronchitis" "6" "Emphysema/chronic bronchitis"
+"7" "Blood clot in the lung" "7" "Blood clot in the lung"
+"8" "Asthma" "8" "Asthma"
+"9" "Hayfever, allergic rhinitis or eczema" "9" "Hayfever, allergic rhinitis or eczema"

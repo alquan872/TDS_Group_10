@@ -1,0 +1,5 @@
+name: group10_R
+channels:
+  - bioconda
+  - conda-forge
+prefix: /rds/general/user/aq25/home/anaconda3/envs/group10_R

@@ -1,0 +1,6 @@
+"OriginalValue" "OriginalMeaning" "RecodedValue" "RecodedMeaning"
+"1" "1" "1" "1"
+"2" "2" "2" "2"
+"300" "3+" "300" "3+"
+"444" "quarter" "444" "quarter"
+"555" "half" "555" "half"

@@ -1,0 +1,6 @@
+"OriginalValue" "OriginalMeaning" "RecodedValue" "RecodedMeaning"
+"0" "Manual" "0" "Manual"
+"1" "1" "1" "1"
+"2" "2" "2" "2"
+"3" "3" "3" "3"
+"4" "4" "4" "4"

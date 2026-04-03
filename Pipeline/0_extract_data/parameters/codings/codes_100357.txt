@@ -1,0 +1,6 @@
+"OriginalValue" "OriginalMeaning" "RecodedValue" "RecodedMeaning"
+"-3" "Prefer not to answer" "-3" "Prefer not to answer"
+"1" "Very easy" "1" "Very easy"
+"2" "Fairly easy" "2" "Fairly easy"
+"3" "Fairly difficult" "3" "Fairly difficult"
+"4" "Very difficult" "4" "Very difficult"

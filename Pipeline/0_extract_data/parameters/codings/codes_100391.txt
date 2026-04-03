@@ -1,0 +1,7 @@
+"OriginalValue" "OriginalMeaning" "RecodedValue" "RecodedMeaning"
+"-1" "Do not know" "-1" "Do not know"
+"-3" "Prefer not to answer" "-3" "Prefer not to answer"
+"1" "White" "1" "White"
+"2" "Brown" "2" "Brown"
+"3" "Wholemeal or wholegrain" "3" "Wholemeal or wholegrain"
+"4" "Other type of bread" "4" "Other type of bread"

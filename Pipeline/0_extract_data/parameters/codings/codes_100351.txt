@@ -1,0 +1,6 @@
+"OriginalValue" "OriginalMeaning" "RecodedValue" "RecodedMeaning"
+"-3" "Prefer not to answer" "-3" "Prefer not to answer"
+"-7" "None of the above" "-7" "None of the above"
+"1" "Manufactured cigarettes" "1" "Manufactured cigarettes"
+"2" "Hand-rolled cigarettes" "2" "Hand-rolled cigarettes"
+"3" "Cigars or pipes" "3" "Cigars or pipes"

@@ -1,0 +1,50 @@
+# Data (do not upload datasets)
+data/
+datasets/
+*.csv
+*.tsv
+*.xlsx
+*.xls
+*.parquet
+*.feather
+*.rds
+
+# Large arrays / models
+*.npy
+*.npz
+*.pkl
+*.joblib
+*.pt
+*.pth
+*.h5
+
+# Outputs
+outputs/
+plots/
+figures/
+results/
+logs/
+
+# Optuna
+*.sqlite
+*.db
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+
+# System
+.DS_Store
+
+# HPC temp files
+tmp/
+temp/
+scratch/
