@@ -157,7 +157,7 @@ Raw UKB tabular data
 [8] Neural networks
         |
         v
-[9] LVQ / GRLVQ
+[9] LVQ
         |
         v
 [10] K-medoids / sex-stratified K-medoids
@@ -271,7 +271,7 @@ A progressively filtered, recoded, and merged dataset ready for preprocessing.
 2-extract_selected.R
     -> extracts the selected variables based on the parameter files
 3-recode_variables.R
-    -> applies recoding / harmonisation rules
+    -> applies recoding
 4-merge_cvd.R
     -> merges processed data with the CVD outcome definition
 ```
@@ -415,7 +415,7 @@ Runs the main preprocessing pipeline.
 
 **Potential tasks in this step**
 
-- variable renaming,
+- variable renaming: In this script there is a dictionary that matches synthetic and real data into a general name to make it more transferable,
 - feature engineering,
 - type corrections,
 - derivation of final analysis-ready fields.
