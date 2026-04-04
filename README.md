@@ -1153,5 +1153,3 @@ tail -f ../4_Stability_Selection_LASSO/logs/Q1_1_lasso_outcome.log
 ## Contact / maintenance note
 
 This README is intended as the central guide for understanding and launching the full Group 10 pipeline. Each subfolder can additionally maintain its own local `ReadMe.txt` with script-specific details, inputs, and outputs. 
-
-ENJOY :)
